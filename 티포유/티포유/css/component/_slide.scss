@@ -1,0 +1,61 @@
+.slide-container {
+  overflow: hidden;
+  &01 {
+  }
+  .swiper-wrapper {
+    .slide {
+      width: 58.3rem;
+      height: 42.6rem;
+      &.main-slide {
+        &01 {
+          background: url('../img/visual_01.png') no-repeat right bottom;
+        }
+        &02 {
+          background: url('../img/visual_02.png') no-repeat right bottom;
+        }
+      }
+    }
+  }
+  & + .swiper-button- {
+    &next {
+      right: 0;
+      width: 4.2rem;
+      background: url('../img/main_v_btn.png') no-repeat 0 0 / 4.2rem 4.2rem;
+      & + .swiper-button-prev {
+        left: 0;
+        width: 4.2rem;
+        background: url('../img/main_v_btn.png') no-repeat 0 0 / 4.2rem 4.2rem;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.swiper-pagination {
+  left: 3.2rem;
+  bottom: -4.7rem;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background-color: #7d8695;
+  opacity: 0.3;
+}
+.swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin-left: 0.6rem;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #55bbb3;
+  opacity: 1;
+}
+
+.slide-pagenation.swiper-pagination {
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 0;
+}
