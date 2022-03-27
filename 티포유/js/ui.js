@@ -1,10 +1,10 @@
 (function() {
-  const hbgBtn = document.querySelector(".btn-hbg");
 
   // 햄버거 버튼(전체 페이지 공통)
   function hbgBtnEvHandler(){
+    const hbgBtn = document.querySelector(".btn-hbg");
 
-      hbgBtn.addEventListener("click", function(){
+    hbgBtn.addEventListener("click", function(){
         hbgBtn.classList.toggle("on");
     });
   };
@@ -56,10 +56,6 @@
         });
         document.getElementById(b).classList.add("on");
 
-
-        // [].forEach.call(tabContent, function(cont, i){
-        //   cont.classList.remove("on");
-        // });
         this.classList.add("on");
         
       });

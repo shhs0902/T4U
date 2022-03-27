@@ -596,6 +596,7 @@ button {
 .app-header {
   height: 8.3rem;
   background-color: #ffffff;
+  border-bottom: 0.1rem solid #b2b3b2;
 }
 
 .app-header .container {
@@ -811,6 +812,101 @@ button {
 }
 
 .app-contents .contents-wrap .contents-area {
+  padding-top: 15.8rem;
+}
+
+.app-contents .contents-wrap .contents-area .title {
+  font-size: 4rem;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 2.3rem 0 6.6rem 0;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area {
+  position: relative;
+  border-top: 0.2rem solid #000000;
+  padding: 4.5rem 0;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc .cont-left {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc .cont-left .contact-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc .cont-left .contact-area .cont-left {
+  padding: 0;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc .cont-left .contact-area .cont-right {
+  border-left: 0;
+  padding: 0;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc .cont-right {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #55bbb3;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc .desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0 2.4rem;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc + .map {
+  height: 47.9rem;
+  margin-top: 5rem;
+  border-radius: 1.5rem;
+  background-color: red;
+}
+
+.app-contents .contents-wrap .contents-area .title + .desc + .map-area .map-desc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0.1rem;
+  height: 100%;
+  background-color: #b2b3b2;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.app-contents .contents-wrap .main-menu + .contents-area {
   padding-top: 9rem;
 }
 
@@ -818,12 +914,6 @@ button {
   position: relative;
   padding: 12.1rem 0;
   overflow: hidden;
-}
-
-.app-contents .contents-wrap .sect-contents:after {
-  content: '';
-  display: block;
-  clear: both;
 }
 
 .app-contents .contents-wrap .sect-contents .title {
@@ -1050,6 +1140,7 @@ button {
 
 .app-contents .contents-wrap .sect-contents#cont-02 .cont-right .slide .desc {
   font-size: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .app-contents .contents-wrap .sect-contents#cont-03 {
@@ -1102,7 +1193,7 @@ button {
 .app-contents .contents-wrap .sect-contents .list-item ul li a {
   display: block;
   color: #ffffff;
-  padding: 6.6rem 7rem 5rem;
+  padding: 3.2rem 7rem 5rem;
 }
 
 .app-contents .contents-wrap .sect-contents .list-item ul li a .title {
@@ -1118,6 +1209,7 @@ button {
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 2.2rem;
+  margin-bottom: 0;
   line-height: 1.6;
 }
 
@@ -1191,6 +1283,7 @@ button {
   border-bottom: 0.1rem solid #b2b3b2;
   padding-bottom: 5.2rem;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .app-contents .contents-wrap .sect-contents .list-item.list-type02 ul li a .btm-area {
@@ -1225,6 +1318,7 @@ button {
 }
 
 .app-contents .menu-list-group .menu-list .title {
+  font-size: 2.5rem;
   padding-bottom: 1rem;
 }
 
