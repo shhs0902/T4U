@@ -1874,6 +1874,7 @@ table tr:last-child td {
 
 .tab-cont {
   position: relative;
+  display: none;
 }
 
 .tab-cont .title {
@@ -1885,6 +1886,10 @@ table tr:last-child td {
   font-size: 1.5rem;
   line-height: 1.5;
   margin-top: 1.3rem;
+}
+
+.tab-cont.on {
+  display: block;
 }
 
 .slide-container {
