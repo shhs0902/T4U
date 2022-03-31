@@ -1,13 +1,37 @@
 (function() {
 
+  // function headerFixHandler() {
+  //   const header = document.querySelector("header");
+
+  //   let scrollPos = window.scrollY;
+  //   console.log(scrollPos);
+  //   if(scrollPos > 50) {
+  //     header.style.position = "fixed";
+  //   }
+  // }
+  // window.addEventListener("scroll", function(){
+  //   headerFixHandler();
+  // });
+
+  
+  const nav = document.querySelector("nav");
   // 햄버거 버튼(전체 페이지 공통)
   function hbgBtnEvHandler(){
     const hbgBtn = document.querySelector(".btn-hbg");
 
     hbgBtn.addEventListener("click", function(){
-        hbgBtn.classList.toggle("on");
+        nav.classList.add("on");
     });
   };
+
+  // gnb 메뉴 닫기(전체 페이지 공통)
+  function gnbMenuClose(){
+    const closeBtn = document.querySelector(".btn-close");
+
+    closeBtn.addEventListener("click", function(){
+      nav.classList.remove("on");
+  });
+  }
 
   // 컨텐츠 슬라이드 width/height
   function slideContainerWidthCalc() {
@@ -72,6 +96,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     hbgBtnEvHandler();
+    gnbMenuClose();
     slideContainerWidthCalc();
   });
 }());

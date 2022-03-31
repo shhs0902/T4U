@@ -24,6 +24,7 @@
   border-radius: 10rem;
   &-join {
     @include bgGreen;
+    font-weight: 700;
     &.big {
       @include bgWhite;
       color: #55bbb3;
@@ -33,6 +34,7 @@
   }
   &-login {
     @include bgWhite;
+    font-weight: 700;
     color: #989898;
     border: 0.1rem solid #989898;
     margin-left: 2.9rem;
@@ -47,6 +49,7 @@
     width: 26rem;
     height: 7rem;
     line-height: 7rem;
+    font-weight: 900;
     color: #000000;
     background-color: #ffffff;
     box-shadow: 0px 0px 25px rgba(149, 157, 170, 0.3);
@@ -89,7 +92,7 @@
         background-color: #d53030;
       }
     }
-  }
+   }
   &-user {
     width: 3rem;
     height: 3rem;
@@ -149,5 +152,11 @@
     line-height: 5.9rem;
     color: #ffffff;
     border-radius: 0.5rem;
+  }
+  &-close {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    font-size: 4rem;
   }
 }

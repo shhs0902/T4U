@@ -120,7 +120,6 @@ q:after {
   content: none;
 }
 table {
-  border-collapse: collapse;
   border-spacing: 0;
 }
 
@@ -171,5 +170,8 @@ select {
 button {
   outline: none;
   border: 0;
+  cursor: pointer;
+}
+label {
   cursor: pointer;
 }

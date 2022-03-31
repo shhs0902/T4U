@@ -1,7 +1,5 @@
 .slide-container {
   overflow: hidden;
-  &01 {
-  }
   .swiper-wrapper {
     .slide {
       width: 58.3rem;
@@ -14,6 +12,7 @@
           background: url('../img/visual_02.png') no-repeat right bottom;
         }
       }
+      
     }
   }
   & + .swiper-button- {
@@ -35,21 +34,39 @@
   left: 3.2rem;
   bottom: -4.7rem;
 }
-.swiper-pagination .swiper-pagination-bullet {
+.list-item .swiper-pagination02 {
+  position: absolute;
+  left: 0;
+  bottom: -5.4rem;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+.swiper-pagination .swiper-pagination-bullet,
+.swiper-pagination02 .swiper-pagination-bullet {
   width: 9px;
   height: 9px;
   background-color: #7d8695;
   opacity: 0.3;
 }
-.swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
+.swiper-pagination .swiper-pagination-bullet + .swiper-pagination-bullet,
+.list-item
+  .swiper-pagination02
+  .swiper-pagination-bullet
+  + .swiper-pagination-bullet {
   margin-left: 0.6rem;
 }
-.swiper-pagination .swiper-pagination-bullet-active {
+.swiper-pagination .swiper-pagination-bullet-active,
+.swiper-pagination02 .swiper-pagination-bullet-active {
   background-color: #55bbb3;
   opacity: 1;
 }
 
-.slide-pagenation.swiper-pagination {
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0;
 }
 
 .swiper-button-prev,
