@@ -1697,7 +1697,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem;
 }
 
 .ly-form .check-area.login {
@@ -1716,9 +1716,18 @@ select {
   border: 0.1rem solid #7c8594;
 }
 
-.ly-form .check-area.login input[type*='checkbox']:checked + label::after {
+.ly-form .check-area.login input[type*='checkbox']:checked + label::before {
   content: '';
-  background-color: black;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.3rem;
+  display: block;
+  width: 0.25rem;
+  height: 0.7rem;
+  border: solid #7c8594;
+  border-width: 0 0.3rem 0.3rem 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .ly-form .check-area.login .find-user {
@@ -1754,18 +1763,32 @@ select {
   text-decoration: underline;
 }
 
-.ly-form .check-area input[type*='checkbox'] {
+.ly-form .check-area.agree-check input[type*='checkbox']:checked + label::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0.3rem;
+  display: block;
+  width: 0.25rem;
+  height: 0.7rem;
+  border: solid #7c8594;
+  border-width: 0 0.3rem 0.3rem 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.ly-form .check-area input[type*='checkbox'], .ly-form .check-area input[type*='radio'] {
   display: none;
 }
 
-.ly-form .check-area input[type*='checkbox'] + label {
+.ly-form .check-area input[type*='checkbox'] + label, .ly-form .check-area input[type*='radio'] + label {
   position: relative;
   font-size: 1.5rem;
   color: #000000;
   padding-left: 2.1rem;
 }
 
-.ly-form .check-area input[type*='checkbox'] + label::after {
+.ly-form .check-area input[type*='checkbox'] + label::after, .ly-form .check-area input[type*='radio'] + label::after {
   content: '';
   position: absolute;
   top: 0.2rem;
@@ -1777,9 +1800,18 @@ select {
   border-radius: 0.3rem;
 }
 
-.ly-form .check-area input[type*='checkbox']:checked + label::after {
+.ly-form .check-area input[type*='checkbox']:checked + label::before, .ly-form .check-area input[type*='radio']:checked + label::before {
   content: '';
-  background-color: black;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.3rem;
+  display: block;
+  width: 0.25rem;
+  height: 0.7rem;
+  border: solid #000000;
+  border-width: 0 0.3rem 0.3rem 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .ly-form .check-area .title {
