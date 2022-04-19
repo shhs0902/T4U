@@ -41,6 +41,8 @@
   });
   }
 
+ 
+
   // 컨텐츠 슬라이드 width/height
   function slideContainerWidthCalc() {
     const slideCon = document.querySelector("#cont-02");
@@ -68,43 +70,123 @@
     });
   }
 
+  const tabBtn = document.querySelectorAll(".tab-btn");
+  const tabContent = document.querySelectorAll(".tab-cont");
+  const currentUrl = location.href;
+  
   // tab
-  function tabEventHandler() {
-    const tabBtn = document.querySelectorAll(".tab-btn");
-    const tabContent = document.querySelectorAll(".tab-cont");
+  
+
+  function tabEventHandler(btn, idx) {
     if(!tabBtn) {
       return;
     }
+    // return function() {
+      [].forEach.call(tabBtn, function(item, x){
+        item.classList.remove(ONSTRING);
+        tabContent[x].classList.remove(ONSTRING);
+      });
+      
+      tabContent[idx].classList.add(ONSTRING);
+  
+      btn.classList.add(ONSTRING);
+    // }
+  }
 
-    [].forEach.call(tabBtn, function(btn, idx){
+  function locationHandler() {
+    const aTag = document.querySelectorAll("a");
+    [].forEach.call(aTag, function(a, ix){
+      const compareUrl = a.getAttribute("href");
+      const active = currentUrl.indexOf(compareUrl);
+     
+      a.addEventListener("click", function(){
+      console.log(compareUrl, currentUrl, active)
 
-      btn.addEventListener("click", function(e){
-        e.preventDefault();
-
-        const a = btn.getAttribute("href");
-        const b = a.replace("#", "");
-
-        [].forEach.call(tabBtn, function(item, x){
-          item.classList.remove(ONSTRING);
-          tabContent[x].classList.remove(ONSTRING);
-
-        });
-        document.getElementById(b).classList.add(ONSTRING);
-
-        this.classList.add(ONSTRING);
-        
+        // if(active > -1) {
+        //   tabEventHandler();
+        // }
       });
     });
   }
 
-  window.addEventListener("resize", function () {
-    slideContainerWidthCalc();
-  });
+  locationHandler();
 
-  document.addEventListener("DOMContentLoaded", function () {
+  function loopHandler() {
+    [].forEach.call(tabBtn, function(btn, idx){
+      btn.addEventListener("click", function(e){
+        e.preventDefault();
+        tabEventHandler(btn, idx);
+      });
+      // locationHandler(btn, idx);
+    });
+  }
+
+  
+
+  // 회원가입
+  // const formDepth02 = document.querySelector(".form-depth.depth02");
+  // const checkInput = document.querySelectorAll(".check-gorup .form-depth.deapth01 input");
+  // const row = document.querySelectorAll(".row-multiple .row-group");
+
+  // function joinDepthCheckHandler() {
+  //   if(!checkInput || !row) {
+  //     return;
+  //   }
+
+    
+  // }
+  const listDepth02 = document.querySelectorAll(".list-item-depth02");
+  // function dropMenuHeightCalc() {
+  //   [].forEach.call(listDepth02, function(item, idx){
+  //     const itemH = item.clientHeight;
+
+  //     item.style.display = "block";
+  //   });
+  // }
+  function boardListDropHandler() {
+    const targetLi = document.querySelectorAll(".list-item-depth01 li");
+  
+
+    [].forEach.call(targetLi, function(li, i){
+      li.addEventListener("click", function() {
+        
+        this.classList.toggle(ONSTRING);
+        // [].forEach.call(listDepth02, function(item, idx){
+        //   const itemH = item.clientHeight;
+    
+        //   item.style.display = "block";
+        // });
+      });
+    });
+    
+  }
+
+  // function loopEventHandler() {
+    
+  // }
+
+  
+  
+
+  function init() {
     hbgBtnEvHandler();
     gnbMenuClose();
     slideContainerWidthCalc();
-    tabEventHandler();
+    // tabEventHandler();
+    // joinDepthCheckHandler();
+    loopHandler();
+    boardListDropHandler();
+    // loopEventHandler();
+
+    window.addEventListener("resize", function () {
+      slideContainerWidthCalc();
+    });
+  }
+
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    init();
+
   });
 }(window));
