@@ -1,16 +1,31 @@
 @media (max-width: 1023px) {
   
-
-  .tbl-box .ui-tr.tbl-head {
+  .app-header .container,
+  .app .container,
+  .app-footer .container {
+    padding: 0 3.6%;
+  }
+  .app .main-menu,
+  .app-contents .visual,
+  .app-header .container .cont-left h1 + .btn-group,
+  .app-header .container .cont-right .search-area,
+  .app-header .container .cont-right .header-icon.btn-alarm,
+  .app-header .container .cont-right .header-icon.btn-user {
     display: none;
   }
-  .tbl-box .ui-tr {
+  .app .main-menu + .menu-list-group {
+    padding-top: 5rem;
+  }
+  .table .ui-tr.tbl-head {
+    display: none;
+  }
+  .table .ui-tr {
     display: block;
     border-top: 0.1rem solid #b2b3b2;
     padding: 2rem 1.5rem;
 
   }
-  .tbl-box .ui-tr .ui-td {
+  .table .ui-tr .ui-td {
     display: block;
     height: auto;
     line-height: inherit;
@@ -19,21 +34,21 @@
     padding-left: 0;
 
   }
-  .tbl-box .ui-tr .ui-td.tbl-title {
+  .table .ui-tr .ui-td.tbl-title {
     width: 100%;
     font-weight: 400;
     margin-top: 0;
   }
-  .tbl-box .ui-tr .ui-td.tbl-date {
+  .table .ui-tr .ui-td.tbl-date {
     display: inline-block;
     width: auto;
     font-size: 1.3rem;
   }
-  .tbl-box .ui-tr .ui-td.tbl-writer {
+  .table .ui-tr .ui-td.tbl-writer {
     display: inline-block;
     width: auto;
   }
-  .tbl-box .ui-tr .ui-td.tbl-space {
+  .table .ui-tr .ui-td.tbl-space {
     display: inline-block;
     width: auto;
   }
@@ -95,15 +110,22 @@
     margin: 0 0 2.4rem;
   }
   .app-contents .contents-area .title + .desc {
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
   }
 
   .app-contents .contents-area .map-area .map-box {
     padding-top: 2.5rem;
   }
+
+  .table-type01 table tr td .tip {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 2rem;
+  }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 710px) {
   .ly-form .check-area .form-depth {
     display: block;
   }
@@ -164,5 +186,35 @@
   }
   .ly-form .check-area.login .btn-group {
     margin-top: 1rem;
+  }
+
+  .table-type01 table tr th {
+    padding: 0 1.8rem 0 1rem;
+  }
+  .app-contents .contents-area.my-page .tab-area {
+    padding: 0;
+  }
+  .table-type01 table tr td .form-area {
+    width: auto;
+  }
+  .table-type01 table tr td {
+    padding: 1.2rem 0 1.2rem 1.8rem;
+  }
+  .table-type01 table tr td .form-group .form-area + .btn {
+    width: auto;
+  }
+  .app-contents .contents-area.my-page .table-area + .submit {
+    width: 100%;
+  }
+  .table-type01 table tr td .form-group {
+    display: block;
+  }
+  .table-type01 table tr td .form-group .form-area + .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+  .table-type01 table tr td .form-group + .form-group {
+    margin-top: 1.5rem;
   }
 }

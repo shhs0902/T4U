@@ -16,7 +16,6 @@
       align-items: center;
       justify-content: space-between;
       height: 100%;
-      padding: 0 4rem;
       .cont- {
         &left {
           display: flex;
@@ -194,14 +193,14 @@
         & + .desc {
           font-size: 1.8rem;
           font-weight: 700;
-          margin: 2.3rem 0 6.6rem 0;
+          padding: 2.3rem 0 6.6rem 0;
         }
       }
-      .map-area {
-        padding-top: 16rem;
+      &.map-area {
+        // padding-top: 16rem;
         .map-box {
           position: relative;
-          border-top: 0.2rem solid #000000;
+          // border-top: 0.2rem solid #000000;
           padding: 4.5rem 0;
           .map-desc {
             position: relative;
@@ -238,7 +237,7 @@
             .desc {
               font-size: 1.5rem;
               font-weight: 400;
-              margin: 1rem 0 2.4rem;
+              padding: 1rem 0 2.4rem;
             }
             & + .map {
               height: 47.9rem;
@@ -259,8 +258,26 @@
           }
         }
       }
-      .notice-area {
-        padding-top: 16rem;
+      // &.notice-area {
+      //   padding-top: 16rem;
+      // }
+      &.my-page {
+        padding-bottom: 9.8rem;
+        .tab- {
+          &area {
+            padding: 0 8%;
+          }
+        }
+        .table-area{
+          border-top: 0;  
+          & + .submit {
+            height: 4.4rem;
+            line-height: 4.4rem;
+            margin-left: auto;
+            margin-top: 1.2rem;
+            padding: 0 2.5rem;
+          }
+        }
       }
       .terms-area {
         padding-top: 11.5rem;
@@ -280,7 +297,7 @@
             .desc {
               font-size: 1.3rem;
               font-weight: 400;
-              margin: 4rem 0;
+              padding: 4rem 0;
             }
           }
         }
@@ -400,6 +417,11 @@
               overflow-y: auto;
             }
           }
+        }
+      }
+      .tab-area {
+        .title {
+          font-size: 2.5rem;
         }
       }
     }
@@ -918,7 +940,7 @@
       display: flex;
       justify-content: space-between;
       font-size: 1.5rem;
-      padding: 4.3rem 4rem;
+      padding: 4.3rem 0;
       .cont- {
         &left {
           text-align: left;
@@ -1015,38 +1037,53 @@
   }
 }
 
-// @media (max-width: 1075px) {
-//   .#{app} {
-//     &-header {
-//       display: flex;
-//       align-items: center;
-//       justify-content: space-between;
-//       height: 8.3rem;
-//       background-color: #ffffff;
+.pop-wrap {
+  .dimmer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    .popup-area {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 39rem;
+      height: 17rem;
+      border-radius: 2rem;
+      background-color: #ffffff;
+      padding: 3rem;
+      transform: translate(-50%, -50%);
+      .desc {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 2rem
+      }
+      .btn-login {
+        @include bgGreen;
+        color: #ffffff;
+        border: 0.1rem solid $main-green;
+        margin-top: 2rem;
+      }
+      .btn-pop-close {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        border-radius: 0;
+      }
+    }
+  }
+  &.active {
+    .dimmer {
+      opacity: 1;
+    }
+    
+  }
+}
 
-//       .cont- {
-//         &left {
-//           display: flex;
-//           align-items: center;
-//         }
-//         &right {
-//         }
-//       }
-//     }
-//     &-contents {
-//       height: calc(100% - 8.3rem);
-//       .visual {
-//         height: 60.1rem;
-//         background-color: blueviolet;
-//       }
-//       .content {
-//         height: calc(100% - 60.1rem);
-//       }
-//     }
 
-//     &-footer {
-//       height: 21rem;
-//       background-color: green;
-//     }
-//   }
-// }

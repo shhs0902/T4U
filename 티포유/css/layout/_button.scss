@@ -183,4 +183,13 @@
     font-size: 1.5rem;
     font-weight: 400;
   }
+  &-certify {
+    background-color: #7c8594;
+  }
+  &-pop-close {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url("../img/icon/menu_close_btn.png") no-repeat right top / 1.8rem 1.8rem;
+  }
 }
