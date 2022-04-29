@@ -24,8 +24,31 @@
           </div>
           <div class="cont-right">
             <div class="search-area">
-              <div class="form-area">
+              <div class="form-area check-focus">
                 <input type="text" placeholder="내용을 입력해주세요." />
+              </div>
+              <div class="search-popup">
+                <ul class="list-item">
+                  <li><a href="#none">최근검색어</a></li>
+                </ul>
+                <div class="check-area">
+                  <div class="form-area">
+                    <input type="checkbox" id="check01" />
+                    <label for="check01">제목</label>
+                  </div>
+                  <div class="form-area">
+                    <input type="checkbox" id="check02" />
+                    <label for="check02">내용</label>
+                  </div>
+                  <div class="form-area">
+                    <input type="checkbox" id="check03" />
+                    <label for="check03">작성자</label>
+                  </div>
+                  <div class="form-area">
+                    <input type="checkbox" id="check04" />
+                    <label for="check04">학급별</label>
+                  </div>
+                </div>
               </div>
             </div>
             <a href="#none" class="header-icon btn-alarm on"></a>
@@ -97,7 +120,10 @@
       <div class="dimmer"></div>
       <!-- //nav -->
 
-      <!-- 사용자에 따라 메뉴/컨텐츠 변경 || data-type으로 사용자 선택-->
+      <!-- 사용자에 따라 메뉴/컨텐츠 변경 ||"app-contents"에  data-type으로 사용자 선택
+           type01 : 교사
+           type02 : 학생 / 학부모
+      -->
       <div class="app-contents" data-user="type01">
         <div class="main-type user-type01" data-user="type01">
           <div class="visual">
@@ -132,9 +158,9 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <!-- //visual -->
           <div class="contents-area">
@@ -195,14 +221,10 @@
                 <div class="cont-left">
                   <div class="title">정보마당</div>
                   <p class="desc">
-                    전문가를 통한 법률적 도움과<br />
-                    수업에 대한 다양한 정보공유,<br />
-                    심리 상담을 통한 힐링 컨텐츠를<br />
-                    티포유에서 이용해보세요
+                    전문가를 통한 법률적 도움과 수업에 대한 다양한 정보공유,
+                    심리 상담을 통한 힐링 컨텐츠를 티포유에서 이용해보세요
                   </p>
                   <div class="swiper-pagination"></div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
                 </div>
 
                 <div class="cont-right">
@@ -528,7 +550,6 @@
                       </a>
                     </li>
                   </ul>
-                  <div class="swiper-pagination02"></div>
                 </div>
               </div>
             </section>
@@ -536,6 +557,7 @@
           <!-- //contents-area -->
         </div>
 
+        <!-- 학생/학부모 -->
         <div class="main-type user-type02" data-user="type02">
           <div class="visual">
             <div class="container">
@@ -569,9 +591,9 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <!-- //visual -->
           <div class="contents-area">
@@ -591,6 +613,7 @@
         </div>
       </div>
       <!-- //app-contents -->
+
       <footer class="app-footer">
         <div class="container">
           <div class="cont-left">
@@ -613,7 +636,12 @@
           <div class="cont-right">
             <h1><a href="#none" class="footer-ci"></a></h1>
             <div class="footer-info">
-              <span>이용약관 | 개인정보취급방침</span>
+              <span
+                ><a href="page/terms_of_use.html">이용약관</a> |
+                <a href="page/personal_information.html"
+                  >개인정보취급방침</a
+                ></span
+              >
             </div>
             <div class="footer-info">
               <span class="copyright"
@@ -623,6 +651,7 @@
           </div>
         </div>
       </footer>
+      <!-- pc footer -->
 
       <footer class="app-footer mobile">
         <div class="container">
@@ -636,19 +665,22 @@
           </div>
           <div class="footer-info">
             <div class="footer-drop">티포유 사업자정보</div>
-          </div>
-          <div class="footer-info company">
-            <div class="info-row">티포유 대표이사 : 김용서</div>
-            <div class="info-row">사업자등록번호 : 206-82-78403</div>
-            <div class="info-row">
-              <p class="p-num">전화번호 : <span>02-522-8130</span></p>
-              <p class="f-num">팩스번호 : <span>02-522-8131</span></p>
+            <div class="footer-company">
+              <div class="info-row">티포유 대표이사 : 김용서</div>
+              <div class="info-row">사업자등록번호 : 206-82-78403</div>
+              <div class="info-row">
+                <p class="p-num">전화번호 : <span>02-522-8130</span></p>
+                <p class="f-num">팩스번호 : <span>02-522-8131</span></p>
+              </div>
+              <div class="info-row">
+                <address>
+                  서울특별시 영등포구 국제금융로6길 26<br />(여의도동 35)
+                  한국노총빌딩 12층
+                </address>
+              </div>
             </div>
-            <address>
-              서울특별시 영등포구 국제금융로6길 26<br />(여의도동 35)
-              한국노총빌딩 12층
-            </address>
           </div>
+
           <a href="../index.html" class="logo"></a>
           <a href="#none" class="footer-ci"></a>
           <div class="footer-info">
@@ -656,6 +688,13 @@
               >Copyright ©티포유. All right reserved.</span
             >
           </div>
+        </div>
+        <div class="footer-bar">
+          <a href="index.html" class="f-home on"></a>
+          <a href="#none" class="f-search" onclick="popupOpen(pop02)"></a>
+          <a href="#none" class="f-alram" onclick="popupOpen(pop03)"></a>
+          <a href="page/mypage.html" class="f-my"></a>
+          <a href="page/class_board_write.html" class="f-write"></a>
         </div>
       </footer>
       <!-- //footer mobile -->
@@ -679,75 +718,15 @@
       </div>
     </div>
 
-    <!-- 이용약관 동의 팝업 -->
-    <div class="popup-wrap type01" id="pop02">
-      <div class="popup-area" style="width: 80%">
-        <div class="popup-head">
-          <h2>이용약관 동의</h2>
-          <a
-            href="#none"
-            class="btn btn-pop-close"
-            onclick="popupClose(pop02);"
-          ></a>
-        </div>
-        <div class="popup-contents">
-          <!-- <div class="row-group"> -->
-          <div class="row-list">
-            <h3>제 1조 (목적)</h3>
-            <ul class="list-item">
-              <li>
-                이 약관은 티포유가 제공하는 홈페이지 서비스의 이용조건 및 절차,
-                기타 필요한 사항을 규정함을 목적으로 합니다.
-              </li>
-            </ul>
-          </div>
-
-          <div class="row-list">
-            <h3>제 2조 (약관의 효력과 변경)</h3>
-            <ul class="list-item">
-              <li>1. 이 약관은 이용자에게 공지함으로써 효력을 발생합니다.</li>
-              <li>
-                2. 이 약관의 내용은 서비스 화면 내에 게시하며 약관의 변경 사항이
-                있을 경우 티포유의 온라인 공지사항을 통해 공지합니다.
-              </li>
-            </ul>
-          </div>
-          <!-- </div> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- 개인정보 동의 팝업 -->
-    <div class="popup-wrap type01" id="pop03">
-      <div class="dimmer">
-        <div class="popup-area" style="width: 80%">
-          <div class="popup-head">
-            <h2>개인정보수집 및 이용</h2>
-            <a
-              href="#none"
-              class="btn btn-pop-close"
-              onclick="popupClose(pop03);"
-            ></a>
-          </div>
-          <div class="popup-contents type01">
-            <!-- <div class="row-group"> -->
-            <div class="row-list">
-              <div class="desc">제 1조 (목적)</div>
-            </div>
-
-            <div class="row-list">
-              <h3>제 2조 (약관의 효력과 변경)</h3>
-              <ul class="list-item">
-                <li>1. 이 약관은 이용자에게 공지함으로써 효력을 발생합니다.</li>
-                <li>
-                  2. 이 약관의 내용은 서비스 화면 내에 게시하며 약관의 변경
-                  사항이 있을 경우 티포유의 온라인 공지사항을 통해 공지합니다.
-                </li>
-              </ul>
-            </div>
-            <!-- </div> -->
-          </div>
-        </div>
+    <!-- 검색 얼럿 -->
+    <div class="popup-wrap" id="pop01">
+      <div class="popup-area" style="width: 50rem">
+        <a
+          href="javascript:void(0)"
+          class="btn btn-pop-close"
+          onclick="popupClose(pop01);"
+        ></a>
+        <div class="popup-contents">로그인 후 이용해 주세요.</div>
       </div>
     </div>
 
@@ -769,10 +748,6 @@
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
         },
         breakpoints: {
           1407: {
@@ -808,54 +783,53 @@
       var swiper = undefined;
       var swiper01 = undefined;
 
-      function initSlide() {
-        if (windowW < 1008 && swiper === undefined) {
-          console.log('!!');
-          swiper = new Swiper('.slide-container03', {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            observer: true,
-            observeParents: true,
-            // breakpoints: {
-            //   878: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 0,
-            //   },
-            // },
-          });
-        } else if (windowW >= 1008 && swiper !== undefined) {
-          swiper.destroy();
-          swiper = undefined;
+      var initSlide = function () {
+        function initSlide01() {
+          if (windowW < 1008 && swiper === undefined) {
+            console.log('!!');
+            swiper = new Swiper('.slide-container03', {
+              slidesPerView: 'auto',
+              spaceBetween: 0,
+              observer: true,
+              observeParents: true,
+              pagination: {
+                el: '.swiper-pagination03',
+                clickable: true,
+              },
+            });
+          } else if (windowW >= 1008 && swiper !== undefined) {
+            swiper.destroy();
+            swiper = undefined;
+          }
         }
-      }
 
-      function initSlide01() {
-        if (windowW < 1008 && swiper01 === undefined) {
-          swiper01 = new Swiper('.slide-container04', {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            observer: true,
-            observeParents: true,
-            // breakpoints: {
-            //   878: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 0,
-            //   },
-            // },
-          });
-        } else if (windowW >= 1008 && swiper01 !== undefined) {
-          swiper01.destroy();
-          swiper01 = undefined;
+        function initSlide02() {
+          if (windowW < 1008 && swiper01 === undefined) {
+            swiper01 = new Swiper('.slide-container04', {
+              slidesPerView: 'auto',
+              spaceBetween: 0,
+              observer: true,
+              observeParents: true,
+              pagination: {
+                el: '.swiper-pagination04',
+                clickable: true,
+              },
+            });
+          } else if (windowW >= 1008 && swiper01 !== undefined) {
+            swiper01.destroy();
+            swiper01 = undefined;
+          }
         }
-      }
+
+        initSlide01();
+        initSlide02();
+      };
 
       initSlide();
-      initSlide01();
 
       window.addEventListener('resize', function () {
         windowW = window.innerWidth;
         initSlide();
-        initSlide01();
       });
     </script>
   </body>
