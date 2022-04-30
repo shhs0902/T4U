@@ -32,6 +32,7 @@ nav {
           padding: 0 6rem;
         &.icon-drop {
           background: url("../img/icon/menu_drop.png") no-repeat  right 5.6rem top 3.3rem / 2.4rem 1.5rem;
+          transition: background 0.3s ease-in-out;
         }
       }
       .sub-gnb-list {
@@ -57,7 +58,7 @@ nav {
       &.on {
         overflow: hidden;
         .icon-drop {
-          background-image: url("../img/icon/menu_drop.png");
+          background-image: url("../img/icon/drop_btn_on.png");
         }
       }
     }
