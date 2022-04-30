@@ -945,6 +945,8 @@ nav .gnb-list > li a {
 
 nav .gnb-list > li a.icon-drop {
   background: url("../img/icon/menu_drop.png") no-repeat right 5.6rem top 3.3rem/2.4rem 1.5rem;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 nav .gnb-list > li .sub-gnb-list {
@@ -975,7 +977,7 @@ nav .gnb-list > li.on {
 }
 
 nav .gnb-list > li.on .icon-drop {
-  background-image: url("../img/icon/menu_drop.png");
+  background-image: url("../img/icon/drop_btn_on.png");
 }
 
 .app {
