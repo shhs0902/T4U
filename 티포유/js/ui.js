@@ -227,6 +227,7 @@
     }
 
     input.addEventListener("click", function(){
+      
       if(checkPoint.checked === true) {
         depth01.classList.add(ONSTRING);
         check.setAttribute("data-type", "type02");
