@@ -102,7 +102,10 @@
     });
 
     tabContent[idx].classList.add(ONSTRING);
-    tabTit.innerText = btn.innerText;
+    if(tabTit) {
+      tabTit.innerText = btn.innerText;
+
+    }
 
 
     btn.classList.add(ONSTRING);
