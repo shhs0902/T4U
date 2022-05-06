@@ -867,7 +867,14 @@
       var swiper = new Swiper('.slide-container', {
         observer: true,
         observeParents: true,
-        loop: false,
+        loop: true,
+        autoplay: {
+          /**
+           * delay 옵션으로 원하는 시간 설정 하능, 현재 2.5초로 설정
+           */
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
